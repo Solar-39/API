@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=DynaPuff:wght@400;500;600&family=Fredoka:wght@400;500;600&display=swap');
+
+
+/* ═══════════════════════════════════
+           CONFIGURAÇÃO CADASTRO
+   ═══════════════════════════════════ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Borel', cursive;
+    color: #685b78;
+
+    background:
+        radial-gradient(circle at 15% 20%,
+            #ffd6ec 0%,
+            transparent 25%
+        ),
+
+        radial-gradient(circle at 85% 15%,
+            #d9d5ff 0%,
+            transparent 25%
+        ),
+
+        radial-gradient(circle at 80% 85%,
+            #c9f4ff 0%,
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff7fc,
+            #f5efff,
+            #effbff
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* ═══════════════════════════════
+              NAVBAR
+   ═══════════════════════════════ */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+
+    background: rgba(255, 255, 255, 0.55) !important;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 2px solid
+        rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 5px 25px
+        rgba(180, 140, 200, 0.12);
+}
+
+
+.navbar-brand {
+    font-family: 'DynaPuff', cursive !important;
+
+    color: #a875c7 !important;
+
+    font-size: 22px;
+
+    text-shadow:
+        1px 1px 0 white,
+        2px 2px 0 #f5c9e5;
+
+    transition: 0.2s ease;
+}
+
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+
+.navbar .nav-link {
+    margin: 0 5px;
+
+    color: #806d87 !important;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 16px;
+
+    border-radius: 15px;
+
+    transition: 0.25s ease;
+}
+
+
+.navbar .nav-link:hover {
+    color: #b477c9 !important;
+
+    background: rgba(255, 215, 240, 0.45);
+
+    transform: translateY(-2px);
+}
+
+
+.navbar .nav-link.active {
+    color: #a15fbd !important;
+
+    background: rgba(245, 205, 235, 0.5);
+
+    border-radius: 15px;
+}
+
+
+/* Dropdown */
+
+.navbar .dropdown-menu {
+    margin-top: 10px;
+
+    padding: 8px;
+
+    background: rgba(255, 250, 255, 0.95);
+
+    border: 2px solid #f2dff1;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(180, 140, 200, 0.18);
+}
+
+
+.navbar .dropdown-item {
+    padding: 9px 14px;
+
+    color: #806d87;
+
+    font-family: 'Fredoka', sans-serif;
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+}
+
+
+.navbar .dropdown-item:hover {
+    color: #a15fbd;
+
+    background: #fce8f6;
+}
+
+
+/* ═══════════════════════════════
+              MAIN
+   ═══════════════════════════════ */
+
+main {
+    width: 100%;
+
+    padding: 45px 20px 60px;
+}
+
+
+/* ═══════════════════════════════
+              TÍTULO
+   ═══════════════════════════════ */
+
+h1 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-family: 'DynaPuff', cursive;
+
+    font-size: clamp(2rem, 5vw, 3.3rem);
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    color: #a875c7;
+
+    text-shadow:
+        2px 2px 0 #ffffff,
+        4px 4px 0 #f5c9e5,
+        0 8px 25px
+        rgba(172, 116, 195, 0.25);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+/* ═══════════════════════════════
+             FORMULÁRIO
+   ═══════════════════════════════ */
+
+   main form {
+    position: relative;
+
+    width: min(650px, 95%);
+    margin: auto;
+    padding: 38px 42px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px rgba(170, 130, 190, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+
+main form::before {
+    content: "♡  ⋆｡°✩  ♡";
+
+    position: absolute;
+
+    top: -17px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 3px 18px;
+
+    color: #c88bd5;
+
+    background: #fff8fd;
+
+    border: 1px solid #f2d7ee;
+
+    border-radius: 30px;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* ═══════════════════════════════
+               LABELS
+   ═══════════════════════════════ */
+
+label {
+    margin: 12px 5px 5px;
+
+    color: #866b91;
+
+    font-family: 'Borel', cursive;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+label::before {
+    content: "♡ ";
+
+    color: #e7a6ce;
+}
+
+
+/* ═══════════════════════════════
+              INPUTS
+   ═══════════════════════════════ */
+
+.input-texto,
+#cep {
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border: 2px solid #f0dced;
+
+    border-radius: 18px;
+
+    outline: none;
+
+    background:
+        rgba(255, 250, 255, 0.78);
+
+    color: #695873;
+
+    font-family: 'Borel', cursive;
+
+    font-size: 14px;
+
+    box-shadow:
+        inset 0 2px 7px
+        rgba(190, 150, 200, 0.08);
+
+    transition: 0.25s ease;
+}
+
+
+.input-texto::placeholder,
+#cep::placeholder {
+    color: #c2a9c7;
+}
+
+
+.input-texto:focus,
+#cep:focus {
+
+    background: #fffaff;
+
+    border-color: #d9a9e5;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(224, 181, 235, 0.18);
+
+    transform: translateY(-2px);
+}
+
+
+/* ═══════════════════════════════
+                ERRO
+   ═══════════════════════════════ */
+
+#erro {
+    min-height: 22px;
+
+    margin: 6px 5px;
+
+    color: #e58cae;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* ═══════════════════════════════
+               BOTÃO
+   ═══════════════════════════════ */
+
+.btn_enviar {
+
+    margin-top: 28px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6b8db,
+            #cdb8f2,
+            #aedadf
+        );
+
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(188, 143, 205, 0.25);
+
+    transition: 0.2s ease;
+}
+
+
+.btn_enviar:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+    box-shadow:
+        0 13px 28px
+        rgba(177, 127, 202, 0.3);
+}
+
+
+.btn_enviar:active {
+
+    transform:
+        translateY(1px)
+        scale(0.98);
+}
+
+
+/* ═══════════════════════════════
+            DECORAÇÕES
+   ═══════════════════════════════ */
+
+.decoration {
+    position: fixed;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+}
+
+
+.decoration-1 {
+    width: 180px;
+    height: 180px;
+
+    top: 5%;
+    left: -70px;
+
+    background: rgba(255, 180, 220, 0.35);
+}
+
+
+.decoration-2 {
+    width: 130px;
+    height: 130px;
+
+    top: 25%;
+    right: -40px;
+
+    background: rgba(188, 180, 255, 0.35);
+}
+
+
+.decoration-3 {
+    width: 100px;
+    height: 100px;
+
+    left: 5%;
+    bottom: 8%;
+
+    background: rgba(170, 235, 255, 0.35);
+}
+
+
+.decoration-4 {
+    width: 70px;
+    height: 70px;
+
+    right: 10%;
+    bottom: 15%;
+
+    background: rgba(255, 220, 240, 0.6);
+}
+
+
+.decoration-5 {
+    width: 45px;
+    height: 45px;
+
+    left: 45%;
+    top: 8%;
+
+    background: rgba(220, 205, 255, 0.4);
+}
+
+
+/* ═══════════════════════════════
+             ANIMAÇÃO
+   ═══════════════════════════════ */
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* ═══════════════════════════════
+           RESPONSIVIDADE
+   ═══════════════════════════════ */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 35px 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 100%;
+        padding: 30px 22px;
+        border-radius: 28px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .input-texto,
+    #cep {
+        padding: 12px 14px;
+    }
+}

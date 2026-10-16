@@ -1,0 +1,510 @@
+/* ═══════════════════════════════════════
+            ILLIT LOGIN ♡
+       dreamy · cute · soft · y2k
+   ═══════════════════════════════════════ */
+
+
+/* ───────── RESET ───────── */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ───────── BODY ───────── */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    font-family: 'Borel', cursive;
+
+    color: #685b78;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #ffd6ec 0%,
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 15%,
+            #d9d5ff 0%,
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 85%,
+            #c9f4ff 0%,
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff7fc,
+            #f5efff,
+            #effbff
+        );
+
+    overflow: hidden;
+}
+
+
+/* ═══════════════════════════════════════
+             DECORAÇÕES
+   ═══════════════════════════════════════ */
+
+.decoration {
+    position: fixed;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+}
+
+
+/* rosa */
+
+.decoration-1 {
+    width: 190px;
+    height: 190px;
+
+    top: 5%;
+    left: -70px;
+
+    background: rgba(255, 180, 220, 0.35);
+
+    box-shadow:
+        0 0 60px rgba(255, 180, 220, 0.5);
+}
+
+
+/* lilás */
+
+.decoration-2 {
+    width: 140px;
+    height: 140px;
+
+    top: 25%;
+    right: -45px;
+
+    background: rgba(188, 180, 255, 0.35);
+
+    box-shadow:
+        0 0 50px rgba(188, 180, 255, 0.5);
+}
+
+
+/* azul */
+
+.decoration-3 {
+    width: 110px;
+    height: 110px;
+
+    left: 5%;
+    bottom: 8%;
+
+    background: rgba(170, 235, 255, 0.35);
+}
+
+
+/* rosa clarinha */
+
+.decoration-4 {
+    width: 75px;
+    height: 75px;
+
+    right: 10%;
+    bottom: 15%;
+
+    background: rgba(255, 220, 240, 0.6);
+}
+
+
+/* lilás pequena */
+
+.decoration-5 {
+    width: 50px;
+    height: 50px;
+
+    left: 45%;
+    top: 8%;
+
+    background: rgba(220, 205, 255, 0.4);
+}
+
+
+/* ═══════════════════════════════════════
+                  MAIN
+   ═══════════════════════════════════════ */
+
+main {
+    width: 100%;
+}
+
+
+/* ═══════════════════════════════════════
+                  TÍTULO
+   ═══════════════════════════════════════ */
+
+h1 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-family: 'DynaPuff', cursive;
+
+    font-size: clamp(2.4rem, 6vw, 3.5rem);
+
+    font-weight: 500;
+
+    color: #a875c7;
+
+    text-shadow:
+        2px 2px 0 #ffffff,
+        4px 4px 0 #f5c9e5,
+        0 8px 25px rgba(172, 116, 195, 0.25);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+/* ═══════════════════════════════════════
+                FORMULÁRIO
+   ═══════════════════════════════════════ */
+
+form {
+    position: relative;
+
+    width: min(500px, 95%);
+
+    margin: auto;
+
+    padding: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(170, 130, 190, 0.18),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* enfeite do formulário */
+
+form::before {
+    content: "♡  ⋆｡°✩  ♡";
+
+    position: absolute;
+
+    top: -17px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 3px 18px;
+
+    color: #c88bd5;
+
+    background: #fff8fd;
+
+    border: 1px solid #f2d7ee;
+
+    border-radius: 30px;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* ═══════════════════════════════════════
+                  LABELS
+   ═══════════════════════════════════════ */
+
+label {
+    margin: 12px 5px 5px;
+
+    color: #866b91;
+
+    font-family: 'Borel', cursive;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+label::before {
+    content: "♡ ";
+
+    color: #e7a6ce;
+}
+
+
+/* ═══════════════════════════════════════
+                  INPUTS
+   ═══════════════════════════════════════ */
+
+.input-texto {
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border: 2px solid #f0dced;
+
+    border-radius: 18px;
+
+    outline: none;
+
+    background: rgba(255, 250, 255, 0.78);
+
+    color: #695873;
+
+    font-family: 'Borel', cursive;
+
+    font-size: 14px;
+
+    box-shadow:
+        inset 0 2px 7px
+        rgba(190, 150, 200, 0.08),
+
+        0 3px 12px
+        rgba(200, 160, 210, 0.06);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* placeholder */
+
+input::placeholder {
+    color: #c2a9c7;
+
+    opacity: 0.9;
+}
+
+
+/* foco */
+
+.input-texto:focus {
+
+    background: #fffaff;
+
+    border-color: #d9a9e5;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(224, 181, 235, 0.18),
+
+        0 7px 20px
+        rgba(195, 145, 210, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* ═══════════════════════════════════════
+                   BOTÃO
+   ═══════════════════════════════════════ */
+
+.btn_enviar {
+
+    margin-top: 28px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6b8db,
+            #cdb8f2,
+            #aedadf
+        );
+
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(188, 143, 205, 0.25),
+
+        inset 0 2px 0
+        rgba(255, 255, 255, 0.55);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* hover */
+
+.btn_enviar:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+    filter: brightness(1.04);
+
+    box-shadow:
+        0 13px 28px
+        rgba(177, 127, 202, 0.3),
+
+        inset 0 2px 0
+        rgba(255, 255, 255, 0.7);
+}
+
+
+/* clique */
+
+.btn_enviar:active {
+
+    transform:
+        translateY(1px)
+        scale(0.98);
+}
+
+
+/* ═══════════════════════════════════════
+                 ANIMAÇÃO
+   ═══════════════════════════════════════ */
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* ═══════════════════════════════════════
+              RESPONSIVIDADE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+
+    h1 {
+        font-size: 2.3rem;
+
+        margin-bottom: 30px;
+    }
+
+
+    form {
+        width: 100%;
+
+        padding: 32px 22px;
+
+        border-radius: 28px;
+    }
+
+
+    label {
+        font-size: 14px;
+    }
+
+
+    .input-texto {
+        padding: 12px 14px;
+    }
+
+
+    .btn_enviar {
+        font-size: 17px;
+    }
+}
+
+
+/* ═══════════════════════════════════════
+             SELEÇÃO DE TEXTO
+   ═══════════════════════════════════════ */
+
+::selection {
+    background: #e8c5ed;
+
+    color: #73577e;
+}
+
+
+/* ═══════════════════════════════════════
+                SCROLLBAR
+   ═══════════════════════════════════════ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #fff3fa;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            #f2b9dc,
+            #cbb9ed
+        );
+}
